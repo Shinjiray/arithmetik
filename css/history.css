@@ -1,0 +1,202 @@
+/* Общие стили */
+header {
+    background-color: #0f7513;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+header nav ul li a {
+    font-size: 24px; /* Размер текста в пунктах меню */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Установим общий шрифт */
+    background-attachment: fixed;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px; /* Добавлен отступ между пунктами меню */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center; /* Выравнивание изображения и текста по вертикали */
+    padding: 10px 20px; /* Увеличены отступы вокруг текста */
+    border: 2px solid transparent; /* Добавлена невидимая рамка */
+    border-radius: 5px; /* Закругление углов */
+    transition: all 0.3s ease; /* Анимация изменения всех свойств */
+}
+
+nav ul li a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Увеличено расстояние между изображением и текстом */
+}
+
+/* Анимация при наведении */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Изменение цвета фона */
+    border-color: white; /* Изменение цвета рамки */
+    transform: translateY(-3px); /* Поднятие элемента при наведении */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавление тени */
+}
+
+/* Улучшенные стили для контента */
+.content {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.block {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.block1 {
+    background-image: url("../image/fon1.2.jpg"); /* Задний фон для первого блока */
+}
+
+.block2 {
+    background-image: url("../image/fon1.jpg"); /* Задний фон для второго блока */
+}
+.block3 {
+    background-image: url("../image/fon1.3.jpg");
+}
+.block4 {
+    background-image: url("../image/fon1.jpg");
+}
+
+
+
+.block::after {
+    content: ''; /* Добавляем псевдоэлемент для белого фона */
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     /* Белый фон с прозрачностью 0.9 */
+    z-index: 2;
+}
+
+.block h2,
+.block p,
+.block ul,
+.block li {
+    position: relative;
+    z-index: 3; /* Устанавливаем более высокий z-index, чтобы текст был поверх белого фона */
+    padding: 0px; /* Добавляем отступы вокруг текста */
+}
+
+.block p,
+.block ul {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.block ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.block ul li {
+    margin-bottom: 10px;
+}
+
+.block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Анимация при наведении на блок */
+.block {
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Добавляем анимацию изменения прозрачности и размера */
+}
+
+.block img {
+    max-width: 100%; /* Установка максимальной ширины изображения */
+    height: auto; /* Сохранение пропорций при изменении ширины */
+}
+
+
+
+.fon{
+    background-color: rgba(255, 255, 255, 0.95);
+    width: auto;
+    height:100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+/* Стили для таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Дополнительные стили для первой таблицы */
+table:first-of-type th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Дополнительные стили для второй таблицы */
+table:nth-of-type(2) th {
+    background-color: #008CBA;
+    color: white;
+}
+
+/* Дополнительные стили для третьей таблицы */
+table:nth-of-type(3) th {
+    background-color: #f44336;
+    color: white;
+}
+.fon li {
+    margin-top: 5px; /* Уменьшаем внешний отступ сверху */
+    margin-bottom: 5px; /* Уменьшаем внешний отступ снизу */
+    padding: 0px; /* Уменьшаем внутренний отступ */
+}
+/* Стили для якорей */
+
+/* Определение стиля для ссылок */
+.block2 a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #333; /* Цвет текста ссылок */
+    transition: color 0.9s ease; /* Плавный переход цвета текста при наведении */
+}
+
+/* Изменение цвета текста при наведении */
+.block2 a:hover {
+    color: #666; /* Цвет текста при наведении курсора */
+}

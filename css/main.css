@@ -1,0 +1,134 @@
+/* Общие стили */
+header {
+    background-color: #0f7513;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+header nav ul li a {
+    font-size: 24px; /* Размер текста в пунктах меню */
+}
+body {
+    font-family: 'Arial', sans-serif; /* Установим общий шрифт */
+    background-attachment: fixed;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px; /* Добавлен отступ между пунктами меню */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center; /* Выравнивание изображения и текста по вертикали */
+    padding: 10px 20px; /* Увеличены отступы вокруг текста */
+    border: 2px solid transparent; /* Добавлена невидимая рамка */
+    border-radius: 5px; /* Закругление углов */
+    transition: all 0.3s ease; /* Анимация изменения всех свойств */
+}
+
+nav ul li a img {
+    width: 50px;
+    height:50px;
+    margin-right: 10px; /* Увеличено расстояние между изображением и текстом */
+}
+
+/* Анимация при наведении */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Изменение цвета фона */
+    border-color: white; /* Изменение цвета рамки */
+    transform: translateY(-3px); /* Поднятие элемента при наведении */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавление тени */
+}
+
+/* Улучшенные стили для контента */
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.block {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Затемнение блока */
+.block {
+    position: relative;
+}
+
+.block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Чем меньше последнее число (0.5), тем более прозрачно затемнение */
+    z-index: 1;
+}
+
+/* Сделать текст над затемнением */
+.block h2,
+.block p,
+.block ul,
+.block li {
+    position: relative;
+    z-index: 2;
+}
+
+/* Стили текста */
+.block h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.block p,
+.block ul {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.block ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.block ul li {
+    margin-bottom: 10px;
+}
+
+.block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Анимация при наведении на блок */
+.block {
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Добавляем анимацию изменения прозрачности и размера */
+}
+
+.block:hover {
+    opacity: 1; /* Увеличиваем прозрачность при наведении на блок */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Изменяем тень при наведении */
+    transform: scale(1.05); /* Увеличиваем размер блока при наведении на него */
+}

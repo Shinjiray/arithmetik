@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Системы счисления</title>
+    <link rel="stylesheet" href="css/train.css">
+</head>
+
+<body
+    style="background-image: url('image/fonmain.jpg');background-repeat: no-repeat; background-size: cover; background-color: rgba(255, 255, 255, 0.2);">
+    <header>
+        <h1>Добро пожаловать на ЦОР "Арифметические основы математики и информатики!"</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="image/house.png" alt="Home"> Главная</a></li>
+                <li><a href="history.html" id="history-link"><img src="image/hystor.png" alt="History"> Исторические
+                        сведения</a></li>
+                <li><a href="materials.html"><img src="image/materials.png" alt="Materials"> Теоретические материалы</a>
+                </li>
+                <li><a href="examples.html"><img src="image/primer.png" alt="Examples"> Примеры решений задач</a></li>
+                <li><a href="#train"><img src="image/test.png" alt="Simulator"> Тренажер</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="fon">
+                <div class = "but">
+                    <button onclick="showTest(1)">История развития систем счисления</button>
+                    <button onclick="showTest(2)">Системы счисления</button>
+                    <button onclick="showTest(3)">Арифметика двоичных чисел</button>
+                </div>
+                <div class="block">
+                    <div id="test-container" class="center-container">
+                        <!-- Initial iframe -->
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSduBSo2QmNl-aq7j_5oZVR96S45X8jQ4PA4haQVxMA-DQ2Jfw/viewform?embedded=true"
+                            width="640" height="4178" frameborder="0" marginheight="0"
+                            marginwidth="0">Загрузка…</iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Ваш подвал -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function showTest(testNumber) {
+            var testContainer = document.getElementById('test-container');
+            var iframe = '';
+            if (testNumber === 1) {
+                iframe = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSduBSo2QmNl-aq7j_5oZVR96S45X8jQ4PA4haQVxMA-DQ2Jfw/viewform?embedded=true" width="640" height="4178" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>';
+            } else if (testNumber === 2) {
+                iframe = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMtnpHW_87NRRb18-zD6qkABYegA-s-Ywo07VGXhFnEpt7zg/viewform?embedded=true" width="640" height="3645" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>';
+            } else if (testNumber === 3) {
+                iframe = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScG70y2g7rErSut_2JPQD3k0PzyHhs8u7GMJgzHaeN9mIw9hA/viewform?embedded=true" width="640" height="3291" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>';
+            }
+            testContainer.innerHTML = iframe;
+        }
+    </script>
+</body>
+
+</html>
